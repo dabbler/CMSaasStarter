@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">TestStarter</string>
-    <string name="title_activity_main">TestStarter</string>
-    <string name="package_name">com.shinydata.teststarter</string>
-    <string name="custom_url_scheme">com.shinydata.teststarter</string>
+    <string name="app_name">Starter</string>
+    <string name="title_activity_main">Starter</string>
+    <string name="package_name">com.shinydata.starter</string>
+    <string name="custom_url_scheme">com.shinydata.starter</string>
 </resources>

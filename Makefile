@@ -25,10 +25,9 @@ build: insert-revision-count
 
 publish : publish-web publish-android
 
-publish-web :
-	ssh towntag "cd towntag/app && git reset --hard && git pull && npm run build" > /tmp/towntag-build.log 2>&1 &
-	#rsync -Pr build/ towntag.app:/var/www/towntag.app/
-	@echo surge build towntag.surge.sh
+publish-web : build
+	rsync -Pr build/ shinydata.com:/var/www/html/
+	@#echo surge build starter.surge.sh
 
 android: build
 	@echo npx cap open android
@@ -36,7 +35,8 @@ android: build
 	@(cd android ; ./gradlew :app:assembleDebug)
 
 publish-android : android
-	rsync -Pr android/app/build/outputs/apk/debug/app-debug.apk towntag:/var/www/towntag.lol/towntag.apk
+	rsync -Pr android/app/build/outputs/apk/debug/app-debug.apk shinydata.com:/var/www/html/app.apk
+	@qrencode -t ANSI https://shinydata.com/app.apk
 
 icons:
 	@echo "Create assets/logo.png and assets/logo-dark.png"
@@ -45,7 +45,7 @@ icons:
 	npx capacitor-assets generate
 
 quick: build
-	surge build
+	surge build starter.surge.sh
 
 
 

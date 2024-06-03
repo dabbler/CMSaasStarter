@@ -1,4 +1,4 @@
-package com.shinydata.teststarter;
+package com.shinydata.starter;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.shinydata.teststarter',
-  appName: 'TestStarter',
+  appId: 'com.shinydata.starter',
+  appName: 'Starter',
   webDir: 'build'
 };
 
