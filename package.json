@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.2.0",
-    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/kit": "^2.5.10",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@tailwindcss/typography": "^0.5.13",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
@@ -38,6 +38,11 @@
   },
   "type": "module",
   "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@ptkdev/sveltekit-cordova-adapter": "^0.3.1",
     "@supabase/auth-helpers-sveltekit": "^0.11.0",
     "@supabase/auth-ui-svelte": "^0.2.9",
     "@supabase/supabase-js": "^2.33.0",
